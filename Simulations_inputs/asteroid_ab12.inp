@@ -1,0 +1,65 @@
+#ISINP
+------------------------------------------------------------------------
+--- this is the new input file used by iSALE versions of v7.0 and higher
+------------------------------------------------------------------------
+------------------- General Model Info ---------------------------------
+VERSION               __DO NOT MODIFY__             : 4.1
+DIMENSION             dimension of input file       : 2
+PATH                  Data file path                : ./
+TDUMP                 Dump save interval            : 20.0D0
+DUMP                  Restart with dump             : 4cppr/restart.dump
+MODEL                 Modelname                     : 2cppr
+REGRID                Regridding                    : 1
+------------------- Mesh Geometry Parameters ---------------------------
+GRIDH                 horizontal cells              : 0           : 576         : 0
+GRIDV                 vertical cells                : 0           : 1040        : 20
+GRIDSPC               grid spacing                  : 0.6
+CYL                   Cylind. geometry              : 1.0D0
+------------------- Global setup parameters -----------------------------
+S_TYPE                setup type                    : DEFAULT
+T_SURF                Surface temp                  : 293.D0
+DTDZSURF              Surface temp. gradient (K/m)  : 30.E-3
+R_PLANET              Radius of planet (m)          : 75
+D_LITH                Lithospheric thickness (m)    : 75
+GRAD_TYPE             gradient type                 : SELF
+GRAD_DIM              gradient dimension            : 3
+SG_BARHUT             Self-grav efficiency param    : 0.1
+SG_NCYCLE             Cycles between SG update      : 1000
+COL_SITE              Location of collision         : 936
+------------------- Projectile ("Object") Parameters --------------------
+OBJNUM                number of objects             : 2
+OBJRESH               CPPR horizontal               : 8           : 531        
+OBJRESV               CPPR vertical                 : 8           : 443         
+OBJVEL                object velocity               : -6.00D3     : 0.D0        
+OBJMAT                object material               : impactr     : target_      
+OBJTYPE               object type                   : SPHEROID    : SPHEROID    
+OBJTPROF              proj thermal prof             : CONST       : CONST      
+OBJOFF_V              vertical offset               : 0           : -886        
+------------------- Target Parameters ----------------------------------
+LAYNUM                layers number                 : 0
+EJECT_V               ejecta elevation              : 6.0
+------------------- Time Parameters ------------------------------------
+DT                    initial time increment        : 2.0D-5
+DTMAX                 maximum timestep              : 5.D-1
+TEND                  end time                      : 200D0
+DTSAVE                save interval                 : 1D0
+------------------- Boundary Condition Parameters ----------------------
+BND_L                 left                          : FREESLIP
+BND_R                 right                         : OUTFLOW
+BND_B                 bottom                        : OUTFLOW
+BND_T                 top                           : OUTFLOW
+------------------- Numerical Stability Parameters ---------------------
+AVIS                  art. visc. linear             : 0.24D0
+AVIS2                 art. visc. quad.              : 1.20D0
+------------------- Tracer Particle Parameters -------------------------
+TR_QUAL               quality                       : 1
+TR_SPCH               tracer spacing X              : -1.5D0       : -1.5D0       : -1.5D0
+TR_SPCV               tracer spacing Y              : -1.5D0       : -1.5D0       : -1.5D0
+TR_VAR                add. tracer fiels             : #TrP-TrT-TrA-TrV-TrB#
+------------------- Control model parameters (global) ------------------
+STRESS                Consider stress               : 1
+------------------- Data Saving Parameters -----------------------------
+QUALITY               Compression rate              : -50
+VARLIST               List of variables             : #Den-Pre-Sie-Tmp-Dam-Yld-VEL-Grv#
+------------------------------------------------------------------------
+<<END
